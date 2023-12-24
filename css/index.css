@@ -2,6 +2,8 @@
 :root {
     --cor-fonte: #F5F5F5;
 
+    font-size: 62.5%; /* 1rem = 10px */
+
   }
 * {
     margin: 0;
