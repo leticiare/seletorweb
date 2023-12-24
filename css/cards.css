@@ -24,6 +24,9 @@
     display: flex;
     justify-content: space-between;
 }
+.card_participantes_icone{
+    width: 7.5%;
+}
 .card_participante__foto_dados{
     display: flex;
     justify-content: space-around;
