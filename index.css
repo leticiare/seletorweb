@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+:root {
+    --cor-fonte: #F5F5F5;
+
+  }
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    background-image: linear-gradient(#443742, #470584);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cabecalho {
+    border-bottom: 1px solid #2E2333;
+}
+.pagina_atual{
+    background-color: rgba(217, 217, 217, 0.288);
+    width: 300px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+}
+.cabecalho__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    list-style-type: none;
+}
+
+.cabecalho__links__logo {
+    width: 70px;
+    height: 77px;
+}
+.cabecalho__links__item{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+}
+.item_link{
+    color: var(--cor-fonte)
+}
+.cabecalho__links__logo {
+    width: 64px;
+    height: 64px;
+}
+
+.titulo_secao{
+    text-align: center;
+    margin: 35px 0 65px 0;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--cor-fonte)
+}
+.secao_principal{
+    padding: 0 10%;
+}
+@media screen and (max-width: 1260px){
+    .pagina_atual{
+        display: none;
+    }
+    .cabecalho__links{
+        height: 80px;
+    }
+    .cabecalho__links__item{
+        width: 250px;
+        text-align: center;
+    }
+}
