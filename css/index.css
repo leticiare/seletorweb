@@ -8,13 +8,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
+    font-family: 'Exo 2', sans-serif;
 }
 
 body {
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Exo 2', sans-serif;
+    min-height: 100vh;
     background-image: linear-gradient(#443742, #470584);
     background-repeat: no-repeat;
     background-attachment: fixed;
