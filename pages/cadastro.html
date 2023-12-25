@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/logo/logo-LAWD.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>SeletorWeb</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <ul class="cabecalho__links">
+            <li><img src="../assets/images/logo/logo-LAWD.svg" alt="Logo da LAWD" class="cabecalho__links__imagem"></li>
+            <li class="cabecalho__links__item "><a href="" class="item_link">Fases do processo</a></li>
+            <li class="cabecalho__links__item pagina_atual "><a href="" class="item_link">Cadastar participante</a></li>
+            <li class="cabecalho__links__item"><a href="" class="item_link">Listar participantes</a></li>
+            <li class=" "><a href=""><img src="../assets/images/usuario.png" alt="" class="cabecalho__links__logo"></a></li>
+        </ul>
+    </header>
+
+    <h1 class="titulo_secao">Cadastrar Participante</h1>
+    <main>
+        <div class="container">
+            <a id="icone-upload" href="">
+                <img src="../assets/images/icone-upload.svg" alt="">
+            </a>
+            <div id="menu-periodo" tabindex="0">
+                <ul>
+                    <p>PERÍODO</p>
+                    <!-- <li>1° PERÍODO</li>
+                    <li>2° PERÍODO</li>
+                    <li>3° PERÍODO</li>
+                    <li>4° PERÍODO</li>
+                    <li>5° PERÍODO</li>
+                    <li>6° PERÍODO</li>
+                    <li>7° PERÍODO</li>
+                    <li>8° PERÍODO</li>
+                    <li>9° PERÍODO</li>
+                    <li>10° PERÍODO</li> -->
+                </ul>
+                <img src="../assets/images/icone-seta-menu.svg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <form id="informacoes-candidato">
+                <div id="campo-nome-candidato" class="campo-informacao-candidato">
+                    <label for="nome-candidato">NOME COMPLETO:</label>
+                    <textarea name="nome-candidato" id="nome-candidato" rows="1" maxlength="100"></textarea>
+                </div>
+                <div id="campo-curso-candidato" class="campo-informacao-candidato">
+                    <label for="curso-candidato">CURSO:</label>
+                    <textarea name="curso-candidato" id="curso-candidato" rows="1" maxlength="60"></textarea>
+                </div>
+            </form>
+        </div>
+        <div id="habilidades" class="container">
+            <h2>HABILIDADES</h2>
+            <ul id="lista-habilidades">
+                <li class="habilidade">
+                    <p>Habilidade 1:</p>
+                    <div class="niveis-habilidade">
+                        <input type="checkbox" name="nivel-1">
+                        <input type="checkbox" name="nivel-2">
+                        <input type="checkbox" name="nivel-3">
+                        <input type="checkbox" name="nivel-4">
+                        <input type="checkbox" name="nivel-5">
+                    </div>
+                </li>
+                <li class="habilidade">
+                    <p>Habilidade 2:</p>
+                    <div class="niveis-habilidade">
+                        <input type="checkbox" name="nivel-1">
+                        <input type="checkbox" name="nivel-2">
+                        <input type="checkbox" name="nivel-3">
+                        <input type="checkbox" name="nivel-4">
+                        <input type="checkbox" name="nivel-5">
+                    </div>
+                </li>
+                <li class="habilidade">
+                    <p>Habilidade 3:</p>
+                    <div class="niveis-habilidade">
+                        <input type="checkbox" name="nivel-1">
+                        <input type="checkbox" name="nivel-2">
+                        <input type="checkbox" name="nivel-3">
+                        <input type="checkbox" name="nivel-4">
+                        <input type="checkbox" name="nivel-5">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="anotacoes" class="container">
+            <h2>ANOTAÇÕES:</h2>
+            <textarea name="anotacoes" id="campo-anotacoes" cols="30" rows="10"></textarea>
+        </div>
+
+        <button id="botao-salvar" type="button">Salvar</button>
+    </main>
+</body>
+</html>

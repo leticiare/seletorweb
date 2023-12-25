@@ -1,0 +1,186 @@
+* {
+    font-size: 1.8rem;
+    list-style: none;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+textarea {
+    min-height: 3rem;
+
+    border-radius: .5rem;
+    border: none;
+
+    padding: 1rem;
+
+    max-width: 50rem;
+
+    line-height: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-self: center;
+
+    gap: 5rem;
+
+    margin: 0 15rem 5rem 15rem;
+
+    background-color: #AF00FC;
+
+    border-radius: 10px;
+
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+
+    max-width: 64rem;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+#icone-upload {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+#icone-upload img {
+    width: 100%;
+}
+
+#menu-periodo {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 2rem;
+
+    padding: 1rem;
+    border-radius: .75rem;
+    border: none;
+
+    background-color: white;
+
+    margin-left: 10rem;
+}
+
+#informacoes-candidato {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.5rem;
+}
+
+.campo-informacao-candidato {
+    display: flex;
+    flex-direction: column;
+
+    gap: .25rem;
+
+    min-width: 32rem;
+}
+
+#nome-candidato, #curso-candidato {
+    max-height: 12rem;
+
+    resize: none;
+    overflow: hidden;
+}
+
+#habilidades {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+}
+
+#lista-habilidades {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+.habilidade {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.habilidade p {
+    font-size: 2rem;
+}
+
+.niveis-habilidade {
+    display: flex;
+    gap: 2rem;
+}
+
+.niveis-habilidade input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: white;
+
+    border-radius: .25rem;
+    border: 1px solid black;
+}
+
+.niveis-habilidade input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.niveis-habilidade input[type="checkbox"]:checked {
+    background-color: greenyellow;
+}
+
+#anotacoes {
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+#campo-anotacoes {
+    min-width: 35rem;
+    min-height: 20rem;
+}
+
+#botao-salvar {
+    min-width: 35rem;
+    height: 3.5rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: rgba(44, 35, 51, 67%);
+
+    color: white;
+
+    font-size: 2.4rem;
+}
+
+#botao-salvar:hover, #botao-salvar:active {
+    cursor: pointer;
+
+    background-color: rgba(44, 35, 51, 80%);
+}
