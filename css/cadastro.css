@@ -79,14 +79,14 @@ main {
     margin-left: 10rem;
 }
 
-#informacoes-candidato {
+#informacoes-participante {
     display: flex;
     flex-direction: column;
 
     gap: 3.5rem;
 }
 
-.campo-informacao-candidato {
+.campo-informacao-participante {
     display: flex;
     flex-direction: column;
 
@@ -95,7 +95,7 @@ main {
     min-width: 32rem;
 }
 
-#nome-candidato, #curso-candidato {
+#nome-participante, #curso-participante {
     max-height: 12rem;
 
     resize: none;
