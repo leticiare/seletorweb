@@ -78,6 +78,11 @@ function adicionarFilhosNaTagHTML(elementoPai, listaFilhos) {
   listaFilhos.map(filho => elementoPai.appendChild(filho));
 }
 
+/**
+ * Esta função é um evento que consiste na mudança do nome da habilidade
+ * @param {Event} event Evento do DOM que foi acionado
+ * @returns {void}
+ */
 function nomearHabilidade(event) {
   const nomeHabilidadeClicada = event.target;
   const input = document.createElement("input");
@@ -85,7 +90,7 @@ function nomearHabilidade(event) {
   input.setAttribute("maxlength", "20");
 
   /**
-   * Este evento é para que seja impossibilitado de escrever caracteres de pontuação ou números
+   * Este evento serve para que seja impossibilitado de escrever caracteres de pontuação ou números
    */
   input.addEventListener("input", () => {
     const textoInput = input.value;
@@ -95,6 +100,9 @@ function nomearHabilidade(event) {
     event.target.value = novoTexto;
   });
 
+  /**
+   * Este é evento serve para substituir o elemento <input> pelo elemento <p>, com todo o conteúdo digitado
+   */
   input.addEventListener("blur", () => {
     const nomeHabilidade = document.createElement("p");
     nomeHabilidade.setAttribute("class", "nome-habilidade");
@@ -111,6 +119,9 @@ function nomearHabilidade(event) {
     input.parentElement.replaceChild(nomeHabilidade, input);
   });
 
+  /**
+   * Evento para ativar a substituição de foco a partir da tecla 'Enter'
+   */
   input.addEventListener("keydown", (event) => {
     if (event.key === 'Enter') {
       input.blur();
