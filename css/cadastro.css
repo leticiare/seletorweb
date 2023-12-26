@@ -114,6 +114,8 @@ main {
     flex-direction: column;
 
     gap: 2rem;
+
+    min-width: 38rem;
 }
 
 .habilidade {
