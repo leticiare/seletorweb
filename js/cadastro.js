@@ -24,6 +24,8 @@ function adicionarHabilidadeNaLista () {
 
   nomeHabilidade.innerText = `Habilidade ${quantidadeHabilidades}:`;
 
+  nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
+
   const niveisHabilidades = [1, 2, 3, 4, 5];
   niveisHabilidades.map(nivel => {
     const checkbox = document.createElement("input");
@@ -76,4 +78,42 @@ function obterSvgLixeiro() {
  */
 function adicionarFilhosNaTagHTML(elementoPai, listaFilhos) {
   listaFilhos.map(filho => elementoPai.appendChild(filho));
+}
+
+function nomearHabilidade(event) {
+  const nomeHabilidadeClicada = event.target;
+  const input = document.createElement("input");
+  input.setAttribute("type", "text");
+  input.setAttribute("maxlength", "20");
+
+  /**
+   * Este evento é para que seja impossibilitado de escrever caracteres de pontuação ou números
+   */
+  input.addEventListener("input", () => {
+    const textoInput = input.value;
+
+    const novoTexto = textoInput.replace(/[0-9'"\\!@#$%&()\|,.<>;:/?{}\[\]_*-+=ºª]/g, '');
+
+    event.target.value = novoTexto;
+  });
+
+  input.addEventListener("blur", () => {
+    const nomeHabilidade = document.createElement("p");
+    nomeHabilidade.setAttribute("class", "nome-habilidade");
+
+    nomeHabilidade.textContent = input.value + ":";
+    nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
+
+    input.parentElement.replaceChild(nomeHabilidade, input);
+  });
+
+  input.addEventListener("keydown", (event) => {
+    if (event.key === 'Enter') {
+      input.blur();
+    }
+  })
+
+  nomeHabilidadeClicada.parentElement.replaceChild(input, nomeHabilidadeClicada);
+
+  input.focus();
 }
