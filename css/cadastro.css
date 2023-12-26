@@ -114,6 +114,8 @@ main {
     flex-direction: column;
 
     gap: 2rem;
+
+    min-width: 38rem;
 }
 
 .habilidade {
@@ -152,6 +154,33 @@ main {
 
 .niveis-habilidade input[type="checkbox"]:checked {
     background-color: greenyellow;
+}
+
+.lixeiro:hover {
+    cursor: pointer;
+    fill: rgb(255, 0, 0);
+}
+
+#nova-habilidade {
+    justify-content: center;
+    width: 100%;
+}
+
+#nova-habilidade button {
+    width: 100%;
+    height: 4rem;
+
+    background-color: #AF00FC;
+
+    border: 0.2rem dotted black;
+}
+
+#nova-habilidade button:hover {
+    cursor: pointer;
+
+    background-color: rgba(44, 35, 51, 20%);
+
+    transition-delay: .1s;
 }
 
 #anotacoes {
