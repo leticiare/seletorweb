@@ -138,6 +138,8 @@ main {
 .niveis-habilidade {
     display: flex;
     gap: 2rem;
+
+    margin-left: auto;
 }
 
 .niveis-habilidade input[type="checkbox"] {
