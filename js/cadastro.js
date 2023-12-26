@@ -9,9 +9,7 @@ botaoAdicaoHabilidade.addEventListener("click", adicionarHabilidadeNaLista);
  * Esta função serve para adicionar uma nova habilidade à lista e é ativada quando o botão de adição de habilidade é clicado
  * @returns {void}
  */
-function adicionarHabilidadeNaLista () {
-  const quantidadeHabilidades = listaHabilidades.children.length;
-  
+function adicionarHabilidadeNaLista () {  
   const elementoLista = document.createElement("li");
 
   const nomeHabilidade = document.createElement("p");
@@ -21,8 +19,6 @@ function adicionarHabilidadeNaLista () {
   elementoLista.setAttribute("class", "habilidade");
   nomeHabilidade.setAttribute("class", "nome-habilidade");
   divNiveisHabilidade.setAttribute("class", "niveis-habilidade");
-
-  nomeHabilidade.innerText = `Habilidade ${quantidadeHabilidades}:`;
 
   nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
 
@@ -43,6 +39,8 @@ function adicionarHabilidadeNaLista () {
 
   adicionarFilhosNaTagHTML(elementoLista, [nomeHabilidade, divNiveisHabilidade, svgLixeiro]);
   adicionarFilhosNaTagHTML(listaHabilidades, [elementoLista, campoAdicaoHabilidade]);
+
+  nomeHabilidade.click();
 }
 
 /**
@@ -101,7 +99,13 @@ function nomearHabilidade(event) {
     const nomeHabilidade = document.createElement("p");
     nomeHabilidade.setAttribute("class", "nome-habilidade");
 
-    nomeHabilidade.textContent = input.value + ":";
+    if (input.value == "") {
+      const quantidadeHabilidades = listaHabilidades.children.length;
+      nomeHabilidade.textContent = `Habilidade ${quantidadeHabilidades - 1}:`;
+    } else {
+      nomeHabilidade.textContent = input.value + ":";
+    }
+
     nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
 
     input.parentElement.replaceChild(nomeHabilidade, input);
