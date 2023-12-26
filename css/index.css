@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
 :root {
     --cor-fonte: #F5F5F5;
 
@@ -67,6 +67,7 @@ body {
 .secao_principal{
     padding: 0 10%;
 }
+
 @media screen and (max-width: 1260px){
     .pagina_atual{
         display: none;
@@ -77,5 +78,26 @@ body {
     .cabecalho__links__item{
         width: 250px;
         text-align: center;
+    }
+}
+@media screen and (max-width: 425px){
+    .cabecalho__links__item{
+        font-weight: 300;
+    }
+    .cabecalho__links__logo {
+        width: 50px;
+        height: 57px;
+    }
+    .cabecalho__links__imagem{
+        width: 45px;
+        height: 45px;
+    }
+    .cabecalho__links{
+        padding: 0% 5%;
+    }
+}
+@media screen and (max-width: 320px){
+    .cabecalho__links{
+        padding: 0% 2%;
     }
 }
