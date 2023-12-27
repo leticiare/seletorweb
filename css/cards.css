@@ -1,14 +1,16 @@
 .seletor_participantes {
   margin-right: 25px;
   margin-bottom: 30px;
+
+  width: fit-content;
 }
 
 .secao_cards_participantes {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: column;
+
+  justify-content: center;
+  align-self: center;
 }
 
 .card_participante {
@@ -42,5 +44,15 @@
 @media screen and (max-width: 425px) {
   .secao_cards_participantes {
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 725px) {
+  .secao_cards_participantes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
   }
 }

@@ -3,6 +3,10 @@
     list-style: none;
 }
 
+body {
+    min-width: max-content;
+}
+
 h2 {
     font-size: 3rem;
 }
