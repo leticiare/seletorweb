@@ -34,13 +34,36 @@
 .card_participante__foto_dados {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 15px;
 }
 
 .card_participante_dados {
   color: #F5F5F5;
+  font-size: 1.4em;
 }
 
-
+.card__habilidade{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  color: var(--cor-fonte);
+  margin-bottom: 6px;
+}
+.card__habilidade input {
+  margin: 0 5px 0 0;
+  padding: .4rem;
+}
+.nome-habilidade{
+  display: inline;
+  margin-right: 1rem;
+}
+#card__observacao{
+  resize: none;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 5px;
+}
 @media screen and (max-width: 425px) {
   .secao_cards_participantes {
     justify-content: space-around;
