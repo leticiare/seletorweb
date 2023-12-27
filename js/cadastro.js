@@ -2,10 +2,10 @@
  * Mapeamento do nível de cor com o seu respectivo código rgb
  */
 const niveisDeCor = {
-  1: 'rgb(235 50 50)',
-  2: 'rgb(255,165,0)',
-  3: 'rgb(255,255,0)',
-  4: 'rgb(154,205,50)',
+  1: 'rgb(235, 50, 50)',
+  2: 'rgb(255, 165, 0)',
+  3: 'rgb(255, 255, 0)',
+  4: 'rgb(154, 205, 50)',
   5: 'rgb(0, 255, 255)'
 };
 
@@ -154,8 +154,19 @@ function nomearHabilidade(event) {
 function selecionarCaixas(event) {
   const caixaSelecionada = event.target;
   const nivelHabilidade = caixaSelecionada.name.substr(caixaSelecionada.name.length - 1);
+  const caixaSelecionadaEComCorCorrespondente = caixaSelecionada.hasAttribute("checked") &&
+    caixaSelecionada.style.backgroundColor == niveisDeCor[nivelHabilidade];
   
   const listaCaixas = Array.from(caixaSelecionada.parentElement.querySelectorAll("input[type='checkbox'"));
+
+  if (caixaSelecionadaEComCorCorrespondente) {
+    listaCaixas.map(caixaSelecao => {
+      caixaSelecao.removeAttribute("checked");
+      caixaSelecao.style.backgroundColor = 'white';
+    });
+
+    return;
+  }
 
   listaCaixas.map(caixaSelecao => {
     const nivelCaixa = caixaSelecao.name.substr(caixaSelecao.name.length - 1);
