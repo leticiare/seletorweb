@@ -1,0 +1,36 @@
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#login-labels{
+    color: var(--cor-fonte);
+    font-size: 15px;
+    font-weight: 10;
+
+}
+.imagem-login{
+    width: 150px;
+    height: 150px;
+}
+.titulo_secao_login{
+    text-align: center;
+    margin: 5px 0 25px 0;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--cor-fonte)
+}
+#usuario-login, #senha-login{
+    height: 22px;
+    width: 380px;
+    border: none;
+    border-radius: 2px;
+}
+#botao-login-entrar{
+    height: 22px;
+    width: 380px;
+    border: none;
+    border-radius: 2px;
+    background-color: #A01DDD;  
+
+}
