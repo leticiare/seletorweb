@@ -160,10 +160,6 @@ align-items: center;
     cursor: pointer;
 }
 
-.niveis-habilidade input[type="checkbox"]:checked {
-    background-color: greenyellow;
-}
-
 .lixeiro:hover {
     cursor: pointer;
     fill: rgb(255, 0, 0);

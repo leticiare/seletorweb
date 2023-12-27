@@ -1,3 +1,14 @@
+/**
+ * Mapeamento do nível de cor com o seu respectivo código rgb
+ */
+const niveisDeCor = {
+  1: 'rgb(235 50 50)',
+  2: 'rgb(255,165,0)',
+  3: 'rgb(255,255,0)',
+  4: 'rgb(154,205,50)',
+  5: 'rgb(0, 255, 255)'
+};
+
 const listaHabilidades = document.getElementById("lista-habilidades");
 
 const campoAdicaoHabilidade = document.getElementById("nova-habilidade");
@@ -27,6 +38,8 @@ function adicionarHabilidadeNaLista () {
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("name", `nivel-${nivel}`);
+
+    checkbox.addEventListener("click", (event) => selecionarCaixas(event));
 
     divNiveisHabilidade.appendChild(checkbox);
   });
@@ -131,4 +144,28 @@ function nomearHabilidade(event) {
   nomeHabilidadeClicada.parentElement.replaceChild(input, nomeHabilidadeClicada);
 
   input.focus();
+}
+
+/**
+ * Esta função é um evento que consiste na seleção das caixas seleção de nível inferior à que foi clicada, e colorir com cor respectiva do nível
+ * @param {Event} event Evento do DOM que foi acionado
+ * @returns {void}
+ */
+function selecionarCaixas(event) {
+  const caixaSelecionada = event.target;
+  const nivelHabilidade = caixaSelecionada.name.substr(caixaSelecionada.name.length - 1);
+  
+  const listaCaixas = Array.from(caixaSelecionada.parentElement.querySelectorAll("input[type='checkbox'"));
+
+  listaCaixas.map(caixaSelecao => {
+    const nivelCaixa = caixaSelecao.name.substr(caixaSelecao.name.length - 1);
+    if (nivelCaixa <= nivelHabilidade) {
+      caixaSelecao.setAttribute("checked", "");
+      caixaSelecao.style.backgroundColor = niveisDeCor[nivelHabilidade];
+    }
+    else {
+      caixaSelecao.removeAttribute("checked");
+      caixaSelecao.style.backgroundColor = 'white';
+    }
+  });
 }
