@@ -37,10 +37,25 @@
 .quadros-fases {
   display: flex;
 }
-.adicionar_fase {
+.adicionar_fase_img {
   width: 90px;
   height: 90px;
   display: flex;
   margin-left: 150px;
   margin-top: 225px;
+}
+
+@media screen and (max-width: 475px) {
+  .quadros-fases {
+    flex-direction: column;
+  }
+  .fases_background {
+    align-content: center;
+  }
+  .adicionar_fase_img {
+    width: 40px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 0px;
+  }
 }
