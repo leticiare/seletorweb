@@ -92,3 +92,28 @@
     height: 190px;
   }
 }
+@media (max-width: 560px) {
+  #login-labels {
+    font-size: 15px;
+  }
+  .titulo_secao_login {
+    font-size: 2rem;
+  }
+  .imagem-login {
+    width: 80px;
+    height: 80px;
+  }
+  #usuario-login,
+  #senha-login {
+    height: 30px;
+    width: 220px;
+  }
+  #botao-login-entrar {
+    height: 36px;
+    width: 220px;
+  }
+  #container {
+    width: 270px;
+    height: 190px;
+  }
+}
