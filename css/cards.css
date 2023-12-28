@@ -79,3 +79,39 @@
     gap: 30px;
   }
 }
+
+
+.checkbox-container .habilidade-checkbox {
+  position: relative;
+  padding-left: 4px; 
+  cursor: not-allowed; 
+}
+
+
+.checkbox-container .habilidade-checkbox:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px; 
+  height: 10px; 
+  border: 1px solid #000; 
+  border-radius: 2px;
+  background-color: #F5F5F5; 
+}
+
+.checkbox-container .check-vermelho:before {
+  background-color: rgb(235, 50, 50); 
+}
+.checkbox-container .check-laranja:before {
+  background-color: rgb(255, 165, 0);
+}
+.checkbox-container .check-amarelo:before {
+  background-color: rgb(255, 255, 0); 
+}
+.checkbox-container .check-azul:before {
+  background-color: rgb(0, 255, 255);
+}
+.checkbox-container .check-verde:before {
+  background-color: #00ff00; 
+}
