@@ -1,3 +1,4 @@
+
 .icons{
     display: flex;
     justify-content: center;
@@ -68,7 +69,4 @@ padding-top: 7%;
     margin: 0 auto;
     border-radius: 0 0 15px 15px;
 
-}
-.cabecalho_links_login{
-    display: flex;
 }
