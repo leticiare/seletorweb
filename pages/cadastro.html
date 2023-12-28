@@ -1,75 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/logo/logo-LAWD.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/cadastro.css">
-    <link rel="stylesheet" href="../css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logo/logo-LAWD.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <title>SeletorWeb</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="cabecalho">
-        <ul class="cabecalho__links">
-            <li><img src="../assets/images/logo/logo-LAWD.svg" alt="Logo da LAWD" class="cabecalho__links__imagem"></li>
-            <li class="cabecalho__links__item "><a href="" class="item_link">Fases do processo</a></li>
-            <li class="cabecalho__links__item pagina_atual "><a href="" class="item_link">Cadastar participante</a></li>
-            <li class="cabecalho__links__item"><a href="./index.html" class="item_link">Listar participantes</a></li>
-            <li class=" "><a href=""><img src="../assets/images/usuario.png" alt="" class="cabecalho__links__logo"></a></li>
-        </ul>
+      <ul class="cabecalho__links">
+        <li>
+          <img
+            src="../assets/images/logo/logo-LAWD.svg"
+            alt="Logo da LAWD"
+            class="cabecalho__links__imagem"
+          />
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="/pages/fases_do_processo.html" class="item_link"
+            >Fases do processo</a
+          >
+        </li>
+        <li class="cabecalho__links__item pagina_atual">
+          <a href="" class="item_link">Cadastar participante</a>
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="./index.html" class="item_link">Listar participantes</a>
+        </li>
+        <li class=" ">
+          <a href=""
+            ><img
+              src="../assets/images/usuario.png"
+              alt=""
+              class="cabecalho__links__logo"
+          /></a>
+        </li>
+      </ul>
     </header>
 
     <h1 class="titulo_secao">Cadastrar Participante</h1>
     <main>
-        <div class="container">
-            <div id="campo-foto-participante">
-                <img id="foto-participante" src="../assets/images/icone-upload.svg" alt="">
-                <label for="input-foto-participante" id="botao-upload-foto-participante">Alterar foto</label>
-                <input type="file" id="input-foto-participante" accept="image/*" multiple="false">
-            </div>
-            <select id="menu-periodo" name="menu-periodo">
-                <option value="periodo" disabled selected hidden>PERÍODO</option>
-                <option value="">1° PERÍODO</option>
-                <option value="">2° PERÍODO</option>
-                <option value="">3° PERÍODO</option>
-                <option value="">4° PERÍODO</option>
-                <option value="">5° PERÍODO</option>
-                <option value="">6° PERÍODO</option>
-                <option value="">7° PERÍODO</option>
-                <option value="">8° PERÍODO</option>
-                <option value="">9° PERÍODO</option>
-                <option value="">10° PERÍODO</option>
-            </select>
+      <div class="container">
+        <div id="campo-foto-participante">
+          <img
+            id="foto-participante"
+            src="../assets/images/icone-upload.svg"
+            alt=""
+          />
+          <label
+            for="input-foto-participante"
+            id="botao-upload-foto-participante"
+            >Alterar foto</label
+          >
+          <input
+            type="file"
+            id="input-foto-participante"
+            accept="image/*"
+            multiple="false"
+          />
         </div>
-        <div class="container">
-            <form id="informacoes-participante">
-                <div id="campo-nome-participante" class="campo-informacao-participante">
-                    <label for="nome-participante">NOME COMPLETO:</label>
-                    <textarea name="nome-participante" id="nome-participante" rows="1" maxlength="100"></textarea>
-                </div>
-                <div id="campo-curso-participante" class="campo-informacao-participante">
-                    <label for="curso-participante">CURSO:</label>
-                    <textarea name="curso-participante" id="curso-participante" rows="1" maxlength="60"></textarea>
-                </div>
-            </form>
-        </div>
-        <div id="habilidades" class="container">
-            <h2>HABILIDADES</h2>
-            <ul id="lista-habilidades">
-                <li id="nova-habilidade" class="habilidade">
-                    <button>Adicionar nova habilidade +</button>
-                </li>
-            </ul>
-        </div>
-        <div id="anotacoes" class="container">
-            <h2>ANOTAÇÕES:</h2>
-            <textarea name="anotacoes" id="campo-anotacoes" cols="30" rows="10"></textarea>
-        </div>
+        <select id="menu-periodo" name="menu-periodo">
+          <option value="periodo" disabled selected hidden>PERÍODO</option>
+          <option value="">1° PERÍODO</option>
+          <option value="">2° PERÍODO</option>
+          <option value="">3° PERÍODO</option>
+          <option value="">4° PERÍODO</option>
+          <option value="">5° PERÍODO</option>
+          <option value="">6° PERÍODO</option>
+          <option value="">7° PERÍODO</option>
+          <option value="">8° PERÍODO</option>
+          <option value="">9° PERÍODO</option>
+          <option value="">10° PERÍODO</option>
+        </select>
+      </div>
+      <div class="container">
+        <form id="informacoes-participante">
+          <div
+            id="campo-nome-participante"
+            class="campo-informacao-participante"
+          >
+            <label for="nome-participante">NOME COMPLETO:</label>
+            <textarea
+              name="nome-participante"
+              id="nome-participante"
+              rows="1"
+              maxlength="100"
+            ></textarea>
+          </div>
+          <div
+            id="campo-curso-participante"
+            class="campo-informacao-participante"
+          >
+            <label for="curso-participante">CURSO:</label>
+            <textarea
+              name="curso-participante"
+              id="curso-participante"
+              rows="1"
+              maxlength="60"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+      <div id="habilidades" class="container">
+        <h2>HABILIDADES</h2>
+        <ul id="lista-habilidades">
+          <li id="nova-habilidade" class="habilidade">
+            <button>Adicionar nova habilidade +</button>
+          </li>
+        </ul>
+      </div>
+      <div id="anotacoes" class="container">
+        <h2>ANOTAÇÕES:</h2>
+        <textarea
+          name="anotacoes"
+          id="campo-anotacoes"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
 
-        <button id="botao-salvar" type="button">Salvar</button>
+      <button id="botao-salvar" type="button">Salvar</button>
     </main>
 
     <script src="../js/cadastro.js"></script>
-</body>
+  </body>
 </html>

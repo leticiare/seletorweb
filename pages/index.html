@@ -1,436 +1,1173 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/logo/logo-LAWD.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logo/logo-LAWD.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/cards.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <title>SeletorWeb</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="cabecalho">
-        <ul class="cabecalho__links">
-            <li><img src="../assets/images/logo/logo-LAWD.svg" alt="Logo da LAWD" class="cabecalho__links__logo"></li>
-            <li class="cabecalho__links__item "><a href="" class="item_link">Fases do processo</a></li>
-            <li class="cabecalho__links__item pagina_atual"><a href="" class="item_link">Listar participantes</a></li>
-            <li class="cabecalho__links__item "><a href="./cadastro.html" class="item_link">Cadastar participante</a>
-            </li>
-            <li class=" "><a href=""><img src="../assets/images/usuario.png" alt=""
-                        class="cabecalho__links__imagem"></a></li>
-        </ul>
+      <ul class="cabecalho__links">
+        <li>
+          <img
+            src="../assets/images/logo/logo-LAWD.svg"
+            alt="Logo da LAWD"
+            class="cabecalho__links__logo"
+          />
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="/pages/fases_do_processo.html" class="item_link"
+            >Fases do processo</a
+          >
+        </li>
+        <li class="cabecalho__links__item pagina_atual">
+          <a href="" class="item_link">Listar participantes</a>
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="./cadastro.html" class="item_link">Cadastar participante</a>
+        </li>
+        <li class=" ">
+          <a href=""
+            ><img
+              src="../assets/images/usuario.png"
+              alt=""
+              class="cabecalho__links__imagem"
+          /></a>
+        </li>
+      </ul>
     </header>
 
     <h1 class="titulo_secao">Participantes</h1>
     <main class="secao_principal">
-        <select name="Filtrar" id="filtro" class="seletor_participantes">
-            <option value="">Filtrar</option>
-            <optgroup label="Curso">
-                <option value="ciencia_computacao">Ciencia da Computação</option>
-                <option value="engenharia_computacao">Engenharia da Computação</option>
-                <option value="sistemas_informacao">Sistemas de Informação</option>
-            </optgroup>
-            <option value=""></option>
-        </select>
-        <select name="Ordenar" id="ordenar_participantes_por" class="seletor_participantes">
-            <option value="">Ordenar por</option>
-            <option value="alfabetico">A-Z</option>
-            <option value="maior_periodo">Maior perído</option>
-            <option value="menor_periodo">Menor perído</option>
-            <option value="habilidade1">Habilidade1</option>
-
-        </select>
-        <section class="secao_cards_participantes">
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-vermelho">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="nivel=1" id="" class="habilidade-checkbox  check-laranja">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox  check-laranja">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" checked class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+      <select name="Filtrar" id="filtro" class="seletor_participantes">
+        <option value="">Filtrar</option>
+        <optgroup label="Curso">
+          <option value="ciencia_computacao">Ciencia da Computação</option>
+          <option value="engenharia_computacao">
+            Engenharia da Computação
+          </option>
+          <option value="sistemas_informacao">Sistemas de Informação</option>
+        </optgroup>
+        <option value=""></option>
+      </select>
+      <select
+        name="Ordenar"
+        id="ordenar_participantes_por"
+        class="seletor_participantes"
+      >
+        <option value="">Ordenar por</option>
+        <option value="alfabetico">A-Z</option>
+        <option value="maior_periodo">Maior perído</option>
+        <option value="menor_periodo">Menor perído</option>
+        <option value="habilidade1">Habilidade1</option>
+      </select>
+      <section class="secao_cards_participantes">
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
             </div>
-
-
-
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-amarelo">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-amarelo">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-amarelo">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox  check-laranja">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" disabled name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-vermelho"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
             </div>
-
-
-
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-vermelho" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox  check-amarelo" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox  check-amarelo" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-amarelo" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox  check-laranja" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox  check-laranja" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name="nivel=1"
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
             </div>
-
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                checked
+                class="habilidade-checkbox"
+              />
             </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
 
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
             </div>
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-vermelho" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox" disabled>
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
             </div>
-
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade3: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-laranja">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
             </div>
-            
-            <div class="card_participante">
-                <div class="card_icones">
-                    <img src="../assets/images/favoritar.svg" alt="" class="card_participantes_icone">
-                    <img src="../assets/images/editar_usuario.svg" alt="" class="card_participantes_icone">
-                </div>
-                <div class="card_participante__foto_dados">
-                    <img src="../assets/images/Foto perfil.png" alt="" class="card_participante_perfil">
-                    <div class="card_participante_dados">
-                        <p class="nome-participante">Fulano de Tal</p>
-                        <p class="curso-participante">Engenharia da computação</p>
-                        <p class="periodo-participante">3° período</p>
-                    </div>
-
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade1: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-azul">
-                    </div>
-                </div>
-                <div class="card__habilidade">
-                    <p class="nome-habilidade">Habilidade2: </p>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox check-verde">
-                        <input type="checkbox" name="" id="" class="habilidade-checkbox">
-                    </div>
-                </div>
-                
-                <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">Obs.:</textarea>
-
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                disabled
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
             </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
 
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-vermelho"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-amarelo"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+            </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
 
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
 
-        </section>
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
+
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-vermelho"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
+
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade3:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-laranja"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
+
+        <div class="card_participante">
+          <div class="card_icones">
+            <img
+              src="../assets/images/favoritar.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+            <img
+              src="../assets/images/editar_usuario.svg"
+              alt=""
+              class="card_participantes_icone"
+            />
+          </div>
+          <div class="card_participante__foto_dados">
+            <img
+              src="../assets/images/Foto perfil.png"
+              alt=""
+              class="card_participante_perfil"
+            />
+            <div class="card_participante_dados">
+              <p class="nome-participante">Fulano de Tal</p>
+              <p class="curso-participante">Engenharia da computação</p>
+              <p class="periodo-participante">3° período</p>
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade1:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-azul"
+              />
+            </div>
+          </div>
+          <div class="card__habilidade">
+            <p class="nome-habilidade">Habilidade2:</p>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox check-verde"
+              />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                class="habilidade-checkbox"
+              />
+            </div>
+          </div>
+
+          <textarea name="anotacoes" id="card__observacao" cols="30" rows="4">
+Obs.:</textarea
+          >
+        </div>
+      </section>
     </main>
     <script src="../js/card.js"></script>
-</body>
-
+  </body>
 </html>
