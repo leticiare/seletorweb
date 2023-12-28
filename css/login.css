@@ -25,11 +25,12 @@
   width: 420px;
   border: none;
   border-radius: 2px;
+  background-color: #d9d9d9;
 }
 #botao-login-entrar {
   height: 36px;
   width: 420px;
-  background-color: #a01ddd;
+  background-color: #b100ff;
   border: none;
   color: var(--cor-fonte);
   border-radius: 3px;

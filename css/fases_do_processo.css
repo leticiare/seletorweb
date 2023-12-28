@@ -1,0 +1,13 @@
+.titulo_fases {
+  /* text-align: center; */
+  margin: 35px 0 65px 0;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--cor-fonte);
+}
+.fase_1 {
+  width: 300px;
+  height: 450px;
+  background-color: #d9d9dd;
+  border-radius: 10px;
+}
