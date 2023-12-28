@@ -17,6 +17,7 @@ const inputFotoParticipante = document.getElementById("input-foto-participante")
 const fotoParticipante = document.getElementById("foto-participante");
 
 botaoAdicaoHabilidade.addEventListener("click", adicionarHabilidadeNaLista);
+fotoParticipante.addEventListener("click", ampliarFoto);
 inputFotoParticipante.addEventListener("change", obterFotoParticipante);
 
 /**
@@ -197,4 +198,43 @@ function obterFotoParticipante() {
   }
 
   leitorArquivo.readAsDataURL(arquivo);
+}
+
+/**
+ * Esta função é um evento que tem como objetivo ampliar a foto de perfil do participante, para melhor visualização, é incluído também a função para reverter esse comportamento
+ * @param {Event} event Evento do DOM que foi acionado
+ */
+function ampliarFoto(event) {
+  const fotoParticipante = event.target;
+  const divPai = fotoParticipante.parentElement;
+  
+  fotoParticipante.classList.add("foto-ampliada");
+  divPai.classList.add("container-ampliado");
+  divPai.querySelector("label").style.display = 'none';
+
+  window.addEventListener("click", reduzirFoto);
+  desabilitarScroll();
+
+  /**
+   * Esta função é um evento que reverte o comportamento e desfaz a função mãe
+   * @param {Event} event Evento do DOM que foi acionado
+   */
+  function reduzirFoto(event) {
+    if (event.target != fotoParticipante) {
+      fotoParticipante.classList.remove("foto-ampliada");
+      divPai.classList.remove("container-ampliado");
+      divPai.querySelector("label").style.display = 'initial';
+
+      habilitarScroll();
+      window.removeEventListener("click", reduzirFoto);
+    }
+  }
+}
+
+function desabilitarScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function habilitarScroll() {
+  document.body.style.overflow = 'visible';
 }
