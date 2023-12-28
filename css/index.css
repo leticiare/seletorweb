@@ -9,6 +9,7 @@
 }
 
 * {
+    list-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,12 +51,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    list-style-type: none;
-}
-
-.cabecalho__links__logo {
-    width: 70px;
-    height: 77px;
 }
 
 .cabecalho__links__item {
@@ -65,18 +60,12 @@ body {
     text-align: center;
 }
 
-.cabecalho__links__imagem {
-    height: 50px;
-
-}
-
 .item_link {
     color: var(--cor-fonte)
 }
 
-.cabecalho__links__logo {
-    width: 64px;
-    height: 64px;
+.cabecalho__links img {
+    width: 85%;
 }
 
 .titulo_secao {
