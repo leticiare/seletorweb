@@ -13,8 +13,11 @@ const listaHabilidades = document.getElementById("lista-habilidades");
 
 const campoAdicaoHabilidade = document.getElementById("nova-habilidade");
 const botaoAdicaoHabilidade = campoAdicaoHabilidade.querySelector("button");
+const inputFotoParticipante = document.getElementById("input-foto-participante");
+const fotoParticipante = document.getElementById("foto-participante");
 
 botaoAdicaoHabilidade.addEventListener("click", adicionarHabilidadeNaLista);
+inputFotoParticipante.addEventListener("change", obterFotoParticipante);
 
 /**
  * Esta função serve para adicionar uma nova habilidade à lista e é ativada quando o botão de adição de habilidade é clicado
@@ -179,4 +182,19 @@ function selecionarCaixas(event) {
       caixaSelecao.style.backgroundColor = 'white';
     }
   });
+}
+
+/**
+ * Esta função é um evento que tem como objetivo obter a foto do participante por meio de um arquivo fornecido por meio de um input, e exibir essa mesma foto na imagem de perfil do cadastro
+ * @returns {void}
+ */
+function obterFotoParticipante() {
+  const arquivo = this.files[0];
+
+  const leitorArquivo = new FileReader();
+  leitorArquivo.onload = (event) => {
+    document.getElementById("foto-participante").setAttribute("src", event.target.result);
+  }
+
+  leitorArquivo.readAsDataURL(arquivo);
 }

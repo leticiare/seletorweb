@@ -23,9 +23,11 @@
     <h1 class="titulo_secao">Cadastrar Participante</h1>
     <main>
         <div class="container">
-            <a id="icone-upload" href="">
-                <img src="../assets/images/icone-upload.svg" alt="">
-            </a>
+            <div id="campo-foto-participante">
+                <img id="foto-participante" src="../assets/images/icone-upload.svg" alt="">
+                <label for="input-foto-participante" id="botao-upload-foto-participante">Alterar foto</label>
+                <input type="file" id="input-foto-participante" accept="image/*" multiple="false">
+            </div>
             <select id="menu-periodo" name="menu-periodo">
                 <option value="periodo" disabled selected hidden>PERÍODO</option>
                 <option value="">1° PERÍODO</option>
