@@ -66,8 +66,9 @@
   padding: 3.5%;
   display: flex;
 }
-@media screen and(max-) {
-  #labels_cadastrar {
-    font-size: 12px;
+@media screen and(max-width: 750px) {
+  .quadro_cadastro {
+    width: 400px;
+    height: 400px;
   }
 }
