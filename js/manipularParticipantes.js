@@ -1,4 +1,5 @@
-const listaParticipantes = JSON.parse(localStorage.getItem('participantes')) || [];
+const itemLocalStorage = localStorage.getItem('participantes');
+const listaParticipantes = itemLocalStorage == undefined ? JSON.parse(itemLocalStorage) : [];
 
 /**
  * Função com objetivo de obter todos os participantes cadastrados
@@ -33,7 +34,7 @@ const adicionarParticipante = (dadosParticipante) => {
  * Função com objetivo de atualizar o localStorage
  */
 const atualizarArmazenamento = () => {
-  localStorage.setItem('participantes', JSON.stringify());
-}
+  localStorage.setItem('participantes', JSON.stringify(listaParticipantes));
+} 
 
 export { obterTodosOsParticipantes, obterParticipante, adicionarParticipante }
