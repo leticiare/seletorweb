@@ -12,7 +12,7 @@ const fotoParticipante = document.getElementById("foto-participante");
 const areasTexto = Array.from(document.querySelectorAll("textarea"));
 const botaoSalvar = document.getElementById("botao-salvar");
 
-iconeFavorito.addEventListener("click", () => iconeFavorito.classList.toggle("favoritado"));
+iconeFavorito.addEventListener("click", () => iconeFavorito.classList.toggle("favorito"));
 botaoAdicaoHabilidade.addEventListener("click", adicionarHabilidadeNaLista);
 fotoParticipante.addEventListener("click", ampliarFoto);
 inputFotoParticipante.addEventListener("change", obterFotoParticipante);
@@ -33,7 +33,7 @@ function salvarParticipante() {
  * @returns {Object} Objeto contendo todas as informações do participante, caso não seja violado nenhuma regra.
  */
 function obterDadosParticipante() {
-  const favorito = document.querySelector(".favoritado") ? true : false;
+  const favorito = document.querySelector(".favorito") ? true : false;
   const urlFoto = fotoParticipante.src;
   const periodo = parseInt(document.getElementById("menu-periodo").value);
   const nome = document.getElementById("nome-participante").value;
