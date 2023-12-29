@@ -33,4 +33,8 @@
     background-color: #DD1D1D;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+#botao_sair_conta:hover{
+    background-color: #9b1818;
 }
