@@ -37,6 +37,7 @@
 .quadros-fases {
   display: flex;
 }
+
 .adicionar_fase_img {
   width: 90px;
   height: 90px;
@@ -50,7 +51,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .quadro{
+  .quadro {
     margin-right: 0;
   }
   .fases_background {
@@ -59,7 +60,11 @@
   .adicionar_fase_img {
     width: 40px;
     height: 40px;
-    margin-left: 150px;
     margin-top: 0px;
+    display: flex;
+    margin-left: 0px;
+  }
+  .div_adicionar_fase {
+    align-items: center;
   }
 }
