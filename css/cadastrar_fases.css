@@ -48,12 +48,21 @@
   border-radius: 2px;
 }
 #botao_cadastrar_fase {
-  width: 450px;
+  width: 200px;
   height: 30px;
   background-color: #b100ff;
+  border-radius: 2px;
+  border: none;
+  margin-right: 25px;
+}
+#botao_cancelar_fase {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(255, 165, 0);
   border-radius: 2px;
   border: none;
 }
 #div_cadastrar_fase {
   padding: 3.5%;
+  display: flex;
 }
