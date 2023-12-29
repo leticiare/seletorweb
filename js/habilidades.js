@@ -27,9 +27,10 @@ const adicionarHabilidadeNaLista = () => {
 
   elementoLista.setAttribute("class", "habilidade");
   nomeHabilidade.setAttribute("class", "nome-habilidade");
+  nomeHabilidade.setAttribute("tabindex", "0");
   divNiveisHabilidade.setAttribute("class", "niveis-habilidade");
 
-  nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
+  nomeHabilidade.addEventListener("focus", (event) => nomearHabilidade(event));
 
   const niveisHabilidades = [1, 2, 3, 4, 5];
   niveisHabilidades.map(nivel => {
@@ -51,7 +52,7 @@ const adicionarHabilidadeNaLista = () => {
   adicionarFilhosNaTagHTML(elementoLista, [nomeHabilidade, divNiveisHabilidade, svgLixeiro]);
   adicionarFilhosNaTagHTML(listaHabilidades, [elementoLista, campoAdicaoHabilidade]);
 
-  nomeHabilidade.click();
+  nomeHabilidade.focus();
 
   /**
    * Esta função serve para transformar a string contendo o código do svg do ícone de lixeiro em um elemento HTML, para facilitar a manipulação dele
@@ -60,7 +61,7 @@ const adicionarHabilidadeNaLista = () => {
   function obterSvgLixeiro() {
     const codigoSvg =
       `
-      <svg class="lixeiro" width="20" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+      <svg tabindex="0" class="lixeiro" width="20" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
         <g>
             <path d="M24,41h77v63c0,9.37-7.63,17-17,17H44c-9.37,0-17-7.63-17-17V52c0-1.66-1.34-3-3-3s-3,1.34-3,3v52c0,12.68,10.32,23,23,23
                     h40c12.68,0,23-10.32,23-23V40.64c5.72-1.36,10-6.5,10-12.64c0-7.17-5.83-13-13-13H24c-7.17,0-13,5.83-13,13S16.83,41,24,41z
@@ -107,6 +108,7 @@ const nomearHabilidade = (event) => {
   input.addEventListener("blur", () => {
     const nomeHabilidade = document.createElement("p");
     nomeHabilidade.setAttribute("class", "nome-habilidade");
+    nomeHabilidade.setAttribute("tabindex", "0");
 
     if (input.value == "") {
       const quantidadeHabilidades = listaHabilidades.children.length;
@@ -115,7 +117,7 @@ const nomearHabilidade = (event) => {
       nomeHabilidade.textContent = input.value + ":";
     }
 
-    nomeHabilidade.addEventListener("click", (event) => nomearHabilidade(event));
+    nomeHabilidade.addEventListener("focus", (event) => nomearHabilidade(event));
 
     input.parentElement.replaceChild(nomeHabilidade, input);
   });
@@ -169,4 +171,26 @@ const selecionarCaixas = (event) => {
   });
 }
 
-export { adicionarHabilidadeNaLista, nomearHabilidade, selecionarCaixas}
+/**
+ * Esta função tem como objetivo obter os dados das habilidades do participante e transformar em um objeto com os mesmos dados.
+ * @returns {Object} Objeto contendo o nome da habilidade e o seu nível.
+ */
+const obterHabilidades = () => {
+  const elementosHabilidades = Array.from(document.querySelectorAll(".habilidade"));
+
+  if (elementosHabilidades.length == 0) {
+    alert("É preciso adicionar alguma habilidade!");
+    return;
+  }
+
+  const habilidades = elementosHabilidades.map((elemento) => {
+    const nomeHabilidade = elemento.querySelector(".nome-habilidade").textContent.replace(":", "");
+    const nivelHabilidade = elemento.querySelector(".niveis-habilidade").querySelectorAll("[checked]").length;
+    
+    return { nome: nomeHabilidade, nivel: nivelHabilidade }
+  });
+
+  return habilidades;
+}
+
+export { adicionarHabilidadeNaLista, nomearHabilidade, selecionarCaixas, obterHabilidades, niveisDeCor }

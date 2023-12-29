@@ -1,3 +1,7 @@
+input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
 .seletor_participantes {
   margin-right: 25px;
   margin-bottom: 30px;
@@ -14,8 +18,7 @@
 }
 
 .card_participante {
-  width: 270px;
-  height: 270px;
+  max-height: max-content;
   background-color: #C351FC;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -25,6 +28,10 @@
 .card_icones {
   display: flex;
   justify-content: space-between;
+}
+
+.favorito path {
+  fill: rgba(255, 255, 0, 1);
 }
 
 .card_participantes_icone {
@@ -41,28 +48,42 @@
   color: #F5F5F5;
   font-size: 1.4em;
 }
-
-.card__habilidade{
+.card__habilidade {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 15px;
-  color: var(--cor-fonte);
-  margin-bottom: 6px;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  max-width: 100%;
+
+  padding-inline: 1rem;
 }
-.card__habilidade input {
-  margin: 0 5px 0 0;
-  padding: .4rem;
+
+.card__habilidade p {
+  font-size: 1.4rem;
 }
-.nome-habilidade{
-  display: inline;
-  margin-right: 1rem;
+
+.card__habilidade .checkbox-container {
+  display: flex;
+  gap: .5rem;
 }
+
+.card__habilidade .checkbox-container input {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 #card__observacao{
   resize: none;
   padding: 1rem;
   border-radius: 10px;
   margin-top: 5px;
+
+  width: 100%;
+
+  background-color: white;
+  color: black;
 }
 @media screen and (max-width: 425px) {
   .secao_cards_participantes {
@@ -80,24 +101,14 @@
   }
 }
 
-
 .checkbox-container .habilidade-checkbox {
-  position: relative;
-  padding-left: 4px; 
-  cursor: not-allowed; 
-}
-
-
-.checkbox-container .habilidade-checkbox:before {
-  content: '';
-  position: absolute;
   left: 0;
   top: 0;
   width: 10px; 
   height: 10px; 
   border: 1px solid #000; 
   border-radius: 2px;
-  background-color: #F5F5F5; 
+  background-color: #F5F5F5;
 }
 
 .checkbox-container .check-vermelho:before {

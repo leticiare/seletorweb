@@ -58,7 +58,7 @@ main {
     cursor: pointer;
 }
 
-.favoritado path {
+.favorito path {
     fill: rgba(255, 255, 0, 1);
 }
 
