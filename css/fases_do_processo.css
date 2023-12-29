@@ -93,10 +93,11 @@
     font-size: 10px;
   }
   .adicionar_fase_img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-top: 75px;
     display: flex;
     margin-right: 0px;
+    margin-left: 0px;
   }
 }
