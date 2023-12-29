@@ -15,10 +15,12 @@ const campoAdicaoHabilidade = document.getElementById("nova-habilidade");
 const botaoAdicaoHabilidade = campoAdicaoHabilidade.querySelector("button");
 const inputFotoParticipante = document.getElementById("input-foto-participante");
 const fotoParticipante = document.getElementById("foto-participante");
+const areasTexto = Array.from(document.querySelectorAll("textarea"));
 
 botaoAdicaoHabilidade.addEventListener("click", adicionarHabilidadeNaLista);
 fotoParticipante.addEventListener("click", ampliarFoto);
 inputFotoParticipante.addEventListener("change", obterFotoParticipante);
+areasTexto.map((areaTexto) => areaTexto.addEventListener("input", redimensionarCaixaTexto));
 
 /**
  * Esta função serve para adicionar uma nova habilidade à lista e é ativada quando o botão de adição de habilidade é clicado
@@ -231,10 +233,48 @@ function ampliarFoto(event) {
   }
 }
 
+/**
+ * Função para desabilitar o scroll da página
+ */
 function desabilitarScroll() {
   document.body.style.overflow = 'hidden';
 }
 
+/**
+ * Função para habilitar o scroll da página
+ */
 function habilitarScroll() {
   document.body.style.overflow = 'visible';
+}
+
+/**
+ * Esta função é um método que tem como objetivo redimensionar as caixas de texto a depender da quantidade de caracteres dentro dela.
+ * @param {Event} event Evento do DOM que foi acionado
+ */
+function redimensionarCaixaTexto(event) {
+  const caixaTexto = event.target;
+  const larguraMaximaCaixaTexto = parseInt(obterPropriedadeCss(caixaTexto, "max-width"));
+  const preenchimentoCaixaTexto = parseInt(obterPropriedadeCss(caixaTexto, "padding"));
+  const tamanhoLinha = parseInt(obterPropriedadeCss(caixaTexto, 'line-height'));
+  const fontSize = obterPropriedadeCss(caixaTexto, 'font-size');
+  const fontFamily = obterPropriedadeCss(caixaTexto, 'font-family');
+
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+  context.font = fontSize + fontFamily;
+
+  const larguraCaixaTexto = context.measureText(caixaTexto.value).width;
+  
+  caixaTexto.style.width = larguraCaixaTexto + (preenchimentoCaixaTexto * 2) + 1 + "px";
+  caixaTexto.style.height = (Math.floor(larguraCaixaTexto / (larguraMaximaCaixaTexto - preenchimentoCaixaTexto * 2) + 1)) * tamanhoLinha + preenchimentoCaixaTexto * 2 + "px";
+}
+
+/**
+ * Esta função serve para retornar o valor da propriedade de estilo de um elemento HTML
+ * @param {HTMLElement} elemento Elemento HTML que deseja obter a propriedade
+ * @param {CSSPropertyRule} propriedade Propriedade de estilo do elemento
+ * @returns {String} String contendo o valor da propriedade desejada
+ */
+function obterPropriedadeCss(elemento, propriedade) {
+  return window.getComputedStyle(elemento, null).getPropertyValue(propriedade);
 }
