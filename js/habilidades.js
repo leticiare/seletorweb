@@ -193,4 +193,4 @@ const obterHabilidades = () => {
   return habilidades;
 }
 
-export { adicionarHabilidadeNaLista, nomearHabilidade, selecionarCaixas, obterHabilidades }
+export { adicionarHabilidadeNaLista, nomearHabilidade, selecionarCaixas, obterHabilidades, niveisDeCor }
