@@ -32,4 +32,16 @@ const obterPropriedadeCss = (elemento, propriedade) => {
   return window.getComputedStyle(elemento, null).getPropertyValue(propriedade);
 }
 
-export { adicionarFilhosNaTagHTML, desabilitarScroll, habilitarScroll, obterPropriedadeCss }
+/**
+ * Função para converter uma string em um elemento html
+ * @param {String} string String com o HTML do elemento
+ * @returns {HTMLElement} Elemento HTML Convertido de uma string
+ */
+const obterElementoHTMLPorString = (string) => {
+  const parser = new DOMParser();
+  const htmlElemento = parser.parseFromString(string, 'text/html');
+
+  return htmlElemento.body.firstChild;
+}
+
+export { adicionarFilhosNaTagHTML, desabilitarScroll, habilitarScroll, obterPropriedadeCss, obterElementoHTMLPorString }
