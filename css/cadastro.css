@@ -262,13 +262,13 @@ align-items: center;
     transition-delay: .1s;
 }
 
-#anotacoes {
+#campo-anotacoes {
     flex-direction: column;
 
     gap: 2rem;
 }
 
-#campo-anotacoes {
+#anotacoes {
     min-width: 35rem;
     min-height: 20rem;
 }
@@ -323,12 +323,12 @@ align-items: center;
     }
     #nome-participante, 
     #curso-participante, 
-    #campo-anotacoes{
+    #anotacoes{
         width: 300px;
     }
 
     #informacoes-participante,
-    #campo-anotacoes{
+    #anotacoes{
         min-width:300px;
     }
 }
