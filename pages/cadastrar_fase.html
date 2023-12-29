@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="shortcut icon"
+    href="/assets/images/logo/logo-LAWD.png"
+    type="image/x-icon"
+  />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/cadastrar_fases.css" />
+  <title>SeletorWeb</title>
+  <body>
+    <! ->
+    <header class="cabecalho">
+      <ul class="cabecalho__links">
+        <li>
+          <img
+            src="../assets/images/logo/logo-LAWD.svg"
+            alt="Logo da LAWD"
+            class="cabecalho__links__logo"
+          />
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="/pages/fases_do_processo.html" class="item_link"
+            >Fases do processo</a
+          >
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="/pages/index.html" class="item_link">Listar participantes</a>
+        </li>
+        <li class="cabecalho__links__item">
+          <a href="./cadastro.html" class="item_link">Cadastrar participante</a>
+        </li>
+        <li class=" ">
+          <a href=""
+            ><img
+              src="../assets/images/usuario.png"
+              alt=""
+              class="cabecalho__links__imagem"
+          /></a>
+        </li>
+      </ul>
+    </header>
+    <h1 class="titulo_secao">CADASTRAR FASE</h1>
+
+    <div class="quadro_cadastro">
+      <div class="cadastro_background">
+        <form class="dados_fase">
+          <h2 id="labels_cadastrar">Data:</h2>
+          <input type="date" name="data_fase" id="data_fase" />
+          <h2 id="labels_cadastrar">Objetivo:</h2>
+          <textarea
+            name="objetivo_fase"
+            id="objetivo_fase"
+            rows="3"
+            maxlength="1000"
+          ></textarea>
+          <h2 id="labels_cadastrar">Tarefa:</h2>
+          <input
+            type="text"
+            name="tarefa_fase"
+            id="tarefa_fase"
+            maxlength="200"
+          />
+          <h2 id="labels_cadastrar">Responsáveis:</h2>
+          <input
+            type="text"
+            name="responsaveis_fase"
+            id="responsaveis_fase"
+            maxlength="100"
+          />
+          <h2 id="labels_cadastrar">Quantidade de participantes:</h2>
+          <input type="number" name="quantidade_fase" id="quantidade_fase" />
+
+          <div id="div_cadastrar_fase" class="cadastrar_fase">
+            <button id="botao_cadastrar_fase">CADASTRAR</button>
+            <button id="botao_cancelar_fase">CANCELAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

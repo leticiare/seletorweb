@@ -42,6 +42,24 @@ main {
     border-radius: 10px;
 
     padding: 2rem;
+
+    position: relative;
+}
+
+#icone-favorito {
+    position: absolute;
+    
+    right: 2rem;
+    top: 2rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    cursor: pointer;
+}
+
+.favoritado path {
+    fill: rgba(255, 255, 0, 1);
 }
 
 .container {
