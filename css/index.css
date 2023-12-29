@@ -89,3 +89,9 @@ body {
         display: flex;
     }
 }
+
+@media screen and (max-width: 425px){
+    .cabecalho__links__item{
+        text-transform: initial;
+    }
+}
