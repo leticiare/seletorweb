@@ -1,0 +1,36 @@
+.quadro_perfil{
+    background-color: rgba(217, 217, 217, 0.288);
+    height: 450px;
+    width: 80%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+    padding: 2rem;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 50px 0 50px;
+}
+.quadro_perfil__foto_usuario{
+    margin-top: 10%;
+    width: 120px;
+}
+.quadro_perfil__informacoes_usuario{
+    color: var(--cor-fonte);
+    font-size: 16px;
+    text-align: center;
+}
+.quadro_perfil__informacoes_usuario p{
+    margin-bottom: 10px;
+}
+#botao_sair_conta{
+    width: 220px;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: var(--cor-fonte);
+    background-color: #DD1D1D;
+    border: none;
+    border-radius: 10px;
+}
