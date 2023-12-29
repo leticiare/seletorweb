@@ -2,6 +2,7 @@ import { adicionarHabilidadeNaLista, obterHabilidades } from "./habilidades.js";
 import { obterFotoParticipante, ampliarFoto } from "./fotoParticipante.js";
 import { redimensionarCaixaTexto } from "./caixaTexto.js";
 import { adicionarParticipante } from "./manipularParticipantes.js";
+import { camposNecessariosPreenchidos, habilidadesValidas } from "./verificacoes.js";
 
 const iconeFavorito = document.getElementById("icone-favorito");
 const campoAdicaoHabilidade = document.getElementById("nova-habilidade");
@@ -40,12 +41,7 @@ function obterDadosParticipante() {
   const habilidades = obterHabilidades();
   const anotacoes = document.getElementById("anotacoes").value;
 
-  const camposNecessariosVazios = (periodo == 0 || nome.replace(/\s/g, '').length == 0 || curso.replace(/\s/g, '').length == 0);
-
-  if (camposNecessariosVazios) {
-    alert("É necessário preencher os campos período, nome e curso!");
-    return null;
-  }
+  if (!camposNecessariosPreenchidos() || !habilidadesValidas(habilidades)) return null;
 
   return {nome, curso, periodo, urlFoto, habilidades, anotacoes, favorito}
 }

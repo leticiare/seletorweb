@@ -186,17 +186,9 @@ const obterHabilidades = () => {
   const habilidades = elementosHabilidades.map((elemento) => {
     const nomeHabilidade = elemento.querySelector(".nome-habilidade").textContent.replace(":", "");
     const nivelHabilidade = elemento.querySelector(".niveis-habilidade").querySelectorAll("[checked]").length;
-
-    if (nivelHabilidade == 0) {
-      alert("É preciso informar o nível da habilidade!");
-    }
     
     return { nome: nomeHabilidade, nivel: nivelHabilidade }
   });
-
-  if (habilidades.some((habilidade) => habilidade.nivel === 0)) {
-    return null;
-  }
 
   return habilidades;
 }
