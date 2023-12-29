@@ -1,6 +1,5 @@
 const itemLocalStorage = localStorage.getItem('participantes');
-const listaParticipantes = itemLocalStorage == undefined ? JSON.parse(itemLocalStorage) : [];
-
+const listaParticipantes = itemLocalStorage == undefined ? [] : JSON.parse(itemLocalStorage);
 /**
  * Função com objetivo de obter todos os participantes cadastrados
  * @returns {Array} Lista contendo todos os participantes
