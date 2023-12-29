@@ -42,11 +42,37 @@
     <h1 class="titulo_secao">CADASTRAR FASE</h1>
     <div class="quadro_cadastro">
       <div class="cadastro_background">
-        <h2 id="labels_cadastrar">Data:</h2>
-        <h2 id="labels_cadastrar">Objetivo:</h2>
-        <h2 id="labels_cadastrar">Tarefa:</h2>
-        <h2 id="labels_cadastrar">Responsáveis:</h2>
-        <h2 id="labels_cadastrar">Quantidade de participantes:</h2>
+        <form class="dados_fase">
+          <h2 id="labels_cadastrar">Data:</h2>
+          <input type="date" name="data_fase" id="data_fase" />
+          <h2 id="labels_cadastrar">Objetivo:</h2>
+          <textarea
+            name="objetivo_fase"
+            id="objetivo_fase"
+            rows="3"
+            maxlength="1000"
+          ></textarea>
+          <h2 id="labels_cadastrar">Tarefa:</h2>
+          <input
+            type="text"
+            name="tarefa_fase"
+            id="tarefa_fase"
+            maxlength="200"
+          />
+          <h2 id="labels_cadastrar">Responsáveis:</h2>
+          <input
+            type="text"
+            name="responsaveis_fase"
+            id="responsaveis_fase"
+            maxlength="100"
+          />
+          <h2 id="labels_cadastrar">Quantidade de participantes:</h2>
+          <input type="number" name="quantidade_fase" id="quantidade_fase" />
+
+          <div id="div_cadastrar_fase" class="cadastrar_fase">
+            <button id="botao_cadastrar_fase">CADASTRAR</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>
