@@ -66,9 +66,39 @@
   padding: 3.5%;
   display: flex;
 }
-@media screen and(max-width: 750px) {
+@media (max-width: 750px) {
+  .cadastro_background {
+    height: 440px;
+  }
+}
+@media (max-width: 475px) {
+  #data_fase,
+  #quantidade_fase {
+    width: 120px;
+    height: 25px;
+  }
+  #tarefa_fase,
+  #responsaveis_fase {
+    width: 350px;
+    height: 25px;
+  }
+  #objetivo_fase {
+    width: 350px;
+  }
+  #botao_cancelar_fase,
+  #botao_cadastrar_fase {
+    width: 100px;
+    height: 30px;
+  }
+  .cadastro_background {
+    width: 370px;
+    height: 440px;
+    display: flex;
+  }
   .quadro_cadastro {
-    width: 400px;
-    height: 400px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0 auto;
   }
 }
