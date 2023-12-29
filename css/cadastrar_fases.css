@@ -72,6 +72,9 @@
   }
 }
 @media (max-width: 475px) {
+  .quadro_cadastro{
+    width: 100%;
+  }
   #data_fase,
   #quantidade_fase {
     width: 120px;
